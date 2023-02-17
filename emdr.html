@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EMDR Tool</title>
+    <style>
+      canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #settings {
+        position: fixed;
+        bottom: 60px;
+        left: 10px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+      }
+      #settings.visible {
+        display: block;
+      }
+      #toggle-settings {
+        position: fixed;
+        bottom: 10px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      #toggle-play {
+        position: fixed;
+        bottom: 10px;
+        left: 70px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="settings">
+      <label for="speed">Speed:</label>
+      <input type="range" id="speed" name="speed" min="0" max="10" value="5">
+      <br>
+      <label for="size">Size:</label>
+      <input type="range" id="size" name="size" min="10" max="100" value="50">
+      <br>
+      <label for="color">Color:</label>
+      <input type="color" id="color" name="color" value="#ff0000">
+      <label for="background-color">Background Color:</label>
+      <input type="color" id="background-color" name="background-color" value="#fff">
+    </div>
+    <div id="toggle-settings">+</div>
+    <script src="emdr.js"></script>
+  </body>
+</html>
