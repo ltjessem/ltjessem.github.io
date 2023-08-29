@@ -551,6 +551,7 @@ details[open] summary span.icon {
 summary {
   display: flex;
   cursor: pointer;
+  list-style: none;
 }
 
 summary::-webkit-details-marker {
